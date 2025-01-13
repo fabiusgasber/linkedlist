@@ -90,3 +90,15 @@
         return null;
     }
 
+    const insertAt = (value, index) => {
+        if(index <= 0) prepend(value);
+        else if(index >= size()) append(value);
+        else {
+            const node = createNode(value, null);
+            const previous = at(index - 1);
+            const previousNext = previous.getNext();
+            previous.setNext(node);
+            node.setNext(previousNext);
+        }
+    }
+
