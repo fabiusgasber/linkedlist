@@ -22,3 +22,12 @@
         }
     }
 
+    const append = (value) => {
+        if(getHead() === null) prepend(value);
+        else {
+            let temp = getHead();
+            while(temp.getNext() !== null) temp = temp.getNext();
+            temp.setNext(createNode(value, null));
+        }
+    }
+
