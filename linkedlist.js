@@ -9,3 +9,16 @@
         return temp;
     }
 
+    const size = () => {
+        if(head === null) return 0;
+        else {
+            let temp = getHead();
+            let length = 1;
+            while(temp.getNext() !== null) {
+                length++;
+                temp = temp.getNext();
+            }
+            return length;
+        }
+    }
+
