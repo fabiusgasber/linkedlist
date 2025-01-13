@@ -64,3 +64,15 @@
         }
     }
 
+    const contains = (value) => {
+        if(size() === 0) return false;
+        else {
+            let temp = getHead();
+            while(temp && temp.getValue() !== null) {
+                if(temp.getValue() === value) return true;
+                else temp = temp.getNext();
+            }
+        }
+        return false;
+    }
+
