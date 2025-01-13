@@ -102,3 +102,21 @@
         }
     }
 
+    const removeAt = (index) => {
+        if(index >= size()) pop();
+        else if(index <= 0 && size() > 1) {
+            const nextNode = at(1);
+            getHead().setValue(nextNode.getValue());
+            getHead().setNext(nextNode.getNext());
+        }
+        else if(index <= 0 && size() <= 1) {
+            head = null;
+        }
+        else {
+            const deletedNode = at(index);
+            const previousNode = at(index - 1);
+            const deletedNext = deletedNode.getNext();
+            previousNode.setNext(deletedNext);
+        }
+    }
+
