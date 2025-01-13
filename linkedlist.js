@@ -31,3 +31,11 @@
         }
     }
 
+    const prepend = (value) => {
+        if(getHead() === null) head = createNode(value, null);
+        else {
+            const oldHead = createNode(head.getValue(), head.getNext());
+            head = createNode(value, oldHead);
+        }
+    }
+
