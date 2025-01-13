@@ -1,3 +1,7 @@
+import { createNode } from "./node.js"
+
+export const createLinkedList = () => {
+
     let head = null;
 
     const getHead = () => head;
@@ -132,3 +136,18 @@
         }
     }
 
+    return { 
+        append, 
+        prepend, 
+        getHead, 
+        getTail, 
+        size, 
+        at, 
+        pop, 
+        contains, 
+        find, 
+        toString, 
+        insertAt, 
+        removeAt 
+    }
+}
