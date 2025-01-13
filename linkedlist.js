@@ -90,6 +90,18 @@
         return null;
     }
 
+    const toString = () => {
+        if(size() === 0) return null;
+        let temp = getHead();
+        let string = "";
+        while(temp && temp.getValue() !== null) {
+            string += `( ${temp.getValue()} ) -> `
+            temp = temp.getNext();
+        }
+        string += "null"
+        return string;
+    }
+
     const insertAt = (value, index) => {
         if(index <= 0) prepend(value);
         else if(index >= size()) append(value);
