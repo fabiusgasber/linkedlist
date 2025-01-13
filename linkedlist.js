@@ -39,3 +39,16 @@
         }
     }
 
+    const at = (index) => {
+        if(index >= size() || index < 0) return -1;
+        let temp = getHead();
+        let i = 0;
+        while(i <= index) {
+            if(i === index) return temp;
+            else {
+                i++;
+                temp = temp.getNext();
+            }
+        }
+    }
+
