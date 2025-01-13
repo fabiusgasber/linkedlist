@@ -52,3 +52,15 @@
         }
     }
 
+    const pop = () => {
+        if(size() === 0) return;
+        else if(size() === 1) return head = null;
+        else if(size() > 1) {
+            let temp = getHead();
+            while(temp.getNext() !== null) {
+                if(temp.getNext().getNext() === null) return temp.setNext(null);
+                else temp = temp.getNext();
+            }
+        }
+    }
+
