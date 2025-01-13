@@ -76,3 +76,17 @@
         return false;
     }
 
+    const find = (value) => {
+        if(size() === 0) return null;
+        let index = 0;
+        let temp = getHead();
+        while(temp && temp.getValue() !== null) {
+            if(temp.getValue() === value) return index;
+            else {
+                temp = temp.getNext();
+                index++;
+            }
+        }
+        return null;
+    }
+
